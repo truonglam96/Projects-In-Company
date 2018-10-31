@@ -1,0 +1,1 @@
+Data Source=his_vp;user id=hisbvnhitp;password=hisbvnhitp

@@ -1,0 +1,15 @@
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\bin\Debug\Calendar.exe.config
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\bin\Debug\Calendar.exe
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\bin\Debug\Calendar.pdb
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\bin\Debug\DevComponents.DotNetBar2.dll
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\bin\Debug\E00_Control.dll
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\bin\Debug\DevComponents.DotNetBar2.xml
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.AJob.resources
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.DailyPlan.resources
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.DayPlan.resources
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.Form1.resources
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.Properties.Resources.resources
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.csproj.GenerateResource.Cache
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.exe
+c:\users\dinht\onedrive\documents\visual studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.pdb
+C:\Users\Dinht\OneDrive\Documents\Visual Studio 2015\Projects\Calendar\Calendar\obj\Debug\Calendar.csprojResolveAssemblyReference.cache

@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A7150286-92ED-4A6D-B658-4972C284C7D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Báo_Cáo_Sử_Dụng</RootNamespace>
+    <AssemblyName>Báo Cáo Sử Dụng</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="AttachFile">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AttachFile.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.vbVidC60">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AxInterop.vbVidC60.dll</HintPath>
+    </Reference>
+    <Reference Include="AxInterop.WMPLib">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\AxInterop.WMPLib.dll</HintPath>
+    </Reference>
+    <Reference Include="BADT_Database">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\BADT_Database.dll</HintPath>
+    </Reference>
+    <Reference Include="BaoDong">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\BaoDong.dll</HintPath>
+    </Reference>
+    <Reference Include="Base2">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Base2.dll</HintPath>
+    </Reference>
+    <Reference Include="CDHA-DICOM">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CDHA-DICOM.dll</HintPath>
+    </Reference>
+    <Reference Include="CheckList">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CheckList.dll</HintPath>
+    </Reference>
+    <Reference Include="ChonFile">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\ChonFile.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.Data.AdoDotNetInterop.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ClientDoc, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.ClientDoc.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommLayer, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.CommLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonControls, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.CommonControls.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataSetConversion, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.DataSetConversion.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="CSCore">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\CSCore.dll</HintPath>
+    </Reference>
+    <Reference Include="DatabaseV2">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DatabaseV2.dll</HintPath>
+    </Reference>
+    <Reference Include="DataGridViewGrouper">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DataGridViewGrouper.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.0.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="dichso">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\dichso.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectX.Capture">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DirectX.Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="DllCheckList">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DllCheckList.dll</HintPath>
+    </Reference>
+    <Reference Include="DLLMapping">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DLLMapping.dll</HintPath>
+    </Reference>
+    <Reference Include="DllNgaygio">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DllNgaygio.dll</HintPath>
+    </Reference>
+    <Reference Include="DMThongTu">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DMThongTu.dll</HintPath>
+    </Reference>
+    <Reference Include="doiso">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\doiso.dll</HintPath>
+    </Reference>
+    <Reference Include="DShowNET">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\DShowNET.dll</HintPath>
+    </Reference>
+    <Reference Include="E002_QuanLyPhongGiuong">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E002_QuanLyPhongGiuong.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_API_VienPhi">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_API_VienPhi.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_Base">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_Base.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_Bus">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_Bus.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_Common">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_Common.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_Control">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_Control.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_ControlNew">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_ControlNew.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_Helpers">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_Model">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_Model.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_Report">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_Report.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_STT">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_STT.dll</HintPath>
+    </Reference>
+    <Reference Include="E00_System">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E00_System.dll</HintPath>
+    </Reference>
+    <Reference Include="E01_HeThong">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E01_HeThong.dll</HintPath>
+    </Reference>
+    <Reference Include="E02_BenhNhan">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E02_BenhNhan.dll</HintPath>
+    </Reference>
+    <Reference Include="E02_Duoc">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E02_Duoc.dll</HintPath>
+    </Reference>
+    <Reference Include="E02_QuanLyPhongGiuong">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E02_QuanLyPhongGiuong.dll</HintPath>
+    </Reference>
+    <Reference Include="E04_VienPhi">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\E04_VienPhi.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Excel">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="FastColoredTextBox">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\FastColoredTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="FingerApp">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\FingerApp.dll</HintPath>
+    </Reference>
+    <Reference Include="HIS.SOFT.KB">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HIS.SOFT.KB.dll</HintPath>
+    </Reference>
+    <Reference Include="HISDanhmuc">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISDanhmuc.dll</HintPath>
+    </Reference>
+    <Reference Include="HISDuoc">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISDuoc.dll</HintPath>
+    </Reference>
+    <Reference Include="HISFactory">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="HISLIS">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISLIS.dll</HintPath>
+    </Reference>
+    <Reference Include="HISNgonNgu">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISNgonNgu.dll</HintPath>
+    </Reference>
+    <Reference Include="HISNoiTru">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISNoiTru.dll</HintPath>
+    </Reference>
+    <Reference Include="HISReport">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISReport.dll</HintPath>
+    </Reference>
+    <Reference Include="HISRIS">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISRIS.dll</HintPath>
+    </Reference>
+    <Reference Include="HISToltal">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISToltal.dll</HintPath>
+    </Reference>
+    <Reference Include="HISVienphi">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\HISVienphi.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="InputPanelConfigurationLib">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\InputPanelConfigurationLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Excel">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.Office">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Interop.Office.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.vbVidC60">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Interop.vbVidC60.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Interop.WMPLib">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Interop.WMPLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="LCDPK">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LCDPK.dll</HintPath>
+    </Reference>
+    <Reference Include="LibDal">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibDal.dll</HintPath>
+    </Reference>
+    <Reference Include="LibDatabase">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibDatabase.dll</HintPath>
+    </Reference>
+    <Reference Include="LibDuoc">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibDuoc.dll</HintPath>
+    </Reference>
+    <Reference Include="LibLicense">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibLicense.dll</HintPath>
+    </Reference>
+    <Reference Include="LibList">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibList.dll</HintPath>
+    </Reference>
+    <Reference Include="LibMD">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibMD.dll</HintPath>
+    </Reference>
+    <Reference Include="LibMedi">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibMedi.dll</HintPath>
+    </Reference>
+    <Reference Include="LibNetSend">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibNetSend.dll</HintPath>
+    </Reference>
+    <Reference Include="LibReport">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibReport.dll</HintPath>
+    </Reference>
+    <Reference Include="LibUtility">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="LibVienphi">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LibVienphi.dll</HintPath>
+    </Reference>
+    <Reference Include="LichTruc">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\LichTruc.dll</HintPath>
+    </Reference>
+    <Reference Include="MaskedBox">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\MaskedBox.dll</HintPath>
+    </Reference>
+    <Reference Include="MaskedTextBox">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\MaskedTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Medisoft">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Medisoft.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="MultiColumnListBox">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\MultiColumnListBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.111.6.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PhatAmThanh">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\PhatAmThanh.dll</HintPath>
+    </Reference>
+    <Reference Include="QuanLyHoSoBenhAn">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\QuanLyHoSoBenhAn.dll</HintPath>
+    </Reference>
+    <Reference Include="QuanLyPhongGiuong">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\QuanLyPhongGiuong.dll</HintPath>
+    </Reference>
+    <Reference Include="QuanLyTaiSan">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\QuanLyTaiSan.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TAEditor">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\TAEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="TaoSoLieu">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\TaoSoLieu.dll</HintPath>
+    </Reference>
+    <Reference Include="TA_MessageBox">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\TA_MessageBox.dll</HintPath>
+    </Reference>
+    <Reference Include="testc">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\testc.dll</HintPath>
+    </Reference>
+    <Reference Include="unvell.ReoGrid">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\unvell.ReoGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="unvell.ReoScript">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\unvell.ReoScript.dll</HintPath>
+    </Reference>
+    <Reference Include="unvell.ReoScript.EditorLib">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\unvell.ReoScript.EditorLib.dll</HintPath>
+    </Reference>
+    <Reference Include="UserControlDateTimes">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\UserControlDateTimes.dll</HintPath>
+    </Reference>
+    <Reference Include="UserControlTimeHA">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\UserControlTimeHA.dll</HintPath>
+    </Reference>
+    <Reference Include="UserSothe">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\UserSothe.dll</HintPath>
+    </Reference>
+    <Reference Include="VienPhi">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\VienPhi.dll</HintPath>
+    </Reference>
+    <Reference Include="VienPhiExtension">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\VienPhiExtension.dll</HintPath>
+    </Reference>
+    <Reference Include="VietKeyInput">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\VietKeyInput.dll</HintPath>
+    </Reference>
+    <Reference Include="vnConvert">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\vnConvert.dll</HintPath>
+    </Reference>
+    <Reference Include="XemKQCLS">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\XemKQCLS.dll</HintPath>
+    </Reference>
+    <Reference Include="ê">
+      <HintPath>D:\TruongLam\DLLTaiXuong\DLLTaiXuong\ê.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBaoCaoSuDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBaoCaoSuDung.Designer.cs">
+      <DependentUpon>frmBaoCaoSuDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBaoCaoSuDung.resx">
+      <DependentUpon>frmBaoCaoSuDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
